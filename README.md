@@ -15,5 +15,5 @@ oh-my-posh, posh-git,cicaフォントの導入が必要です。
 1. posh-ghostwheelをダウンロードしてoh-my-poshのカスタムテーマフォルダに設置
 2. 以下のコマンドを実行
     ```powershell
-    Set-Theme posh-ghostwheet
+    Set-Theme posh-ghostwheel
     ```
