@@ -13,10 +13,10 @@ function Write-Theme {
     $path_icon = $sl.PromptSymbols.FolderSymbol
     $path = "$(Get-ShortPath -dir $pwd)"
     $path_list = $path.Split($sl.PromptSymbols.PathSeparator)
-    if ($path -eq "~") {
+    if ($path -eq $sl.PromptSymbols.HomeSymbol) {
         $path_icon = $sl.PromptSymbols.HomeDirectorySymbol
     }
-    elseif ($path[0] -eq "~" ) {
+    elseif ($path[0] -eq $sl.PromptSymbols.HomeSymbol ) {
         $path_icon = $sl.PromptSymbols.HomeFolderSymbol
     }
     elseif ($path_list.Length -eq 1) {
@@ -25,7 +25,7 @@ function Write-Theme {
 
     $prompt += Write-Prompt -Object "$path_icon " -ForegroundColor Blue -BackgroundColor $sl.Colors.PromptBackgroundColor
     foreach ($path_segment in $path_list) {
-        if ($path_segment -eq "~") {
+        if ($path_segment -eq $sl.PromptSymbols.HomeSymbol) {
             $seg_color = [ConsoleColor]::Blue
         }
         elseif ($path_segment -eq $sl.PromptSymbols.TruncatedFolderSymbol) {
