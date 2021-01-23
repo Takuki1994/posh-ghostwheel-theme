@@ -24,8 +24,8 @@
                         "color_background": false,
                         "prefix": "<#546E7A>＞</> ",
                         "branch_icon": "<#ff6347>git</> ",
-                        "branch_ahead_icon":"⬆",
-                        "branch_behind_icon": "⬇",
+                        "branch_ahead_icon":"⏫",
+                        "branch_behind_icon": "⏬",
                         "display_stash_count": true,
                         "status_colors_enabled": true,
                         "local_working_icon": " 📝",
@@ -34,8 +34,9 @@
                         "working_color": "#ffff00",
                         "staging_color": "#3cb371",
                         "local_changes_color": "#ffff00",
-                        "behind_color": "#800080",
-                        "ahead_color": "#ff0000"
+                        "behind_color": "#9400d3",
+                        "ahead_color": "#1e90ff",
+                        "ahead_and_behind_color": "#ff0000"
                     }
                 }
             ]
