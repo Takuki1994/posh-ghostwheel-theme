@@ -1,0 +1,98 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh3/main/themes/schema.json",
+    "blocks": [
+        {
+            "type": "prompt",
+            "alignment": "left",
+            "vertical_offset": 0,
+            "segments": [
+                {
+                    "type": "path",
+                    "style": "plain",
+                    "foreground": "#26C6DA",
+                    "properties": {
+                        "style": "agnoster_short",
+                        "folder_separator_icon": "<#546E7A> ＞ </>",
+                        "folder_icon": "<#4169e1>📂</>"
+                    }
+                },
+                {
+                    "type": "git",
+                    "style": "plain",
+                    "foreground": "#696969",
+                    "properties": {
+                        "prefix": "<#546E7A>＞</> ",
+                        "branch_icon": "<#ff6347>git</> ",
+                        "status_colors_enabled": true,
+                        "working_color": "#ffff00",
+                        "ahead_and_behind_color": "#ff6347",
+                        "ahead_color": "#ff6347",
+                        "behind_color": "#ff6347",
+                        "staging_color": "#3cb371"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "prompt",
+            "alignment": "right",
+            "segments": [
+                {
+                    "type": "exit",
+                    "style": "plain",
+                    "foreground": "#ffffff",
+                    "properties": {
+                        "display_exit_code": true,
+                        "always_enabled": false,
+                        "error_color": "#e91e63",
+                        "postfix": " <#546E7A>＜</>"
+                    }
+                },
+                {
+                    "type": "root",
+                    "style": "plain",
+                    "foreground": "#D4E157",
+                    "properties": {
+                        "root_icon": "\uF0E7"
+                    }
+                },
+                {
+                    "type": "python",
+                    "style": "plain",
+                    "foreground": "#ffff00",
+                    "properties": {
+                        "postfix": " <#546E7A>＜</>",
+                        "prefix": " <#0068b7>Python</> ",
+                        "display_mode": "always"
+                    }
+                },
+                {
+                    "type": "os",
+                    "style": "plain",
+                    "foreground": "#00bfff",
+                    "properties": {
+                        "windows": "Win",
+                        "ubuntu": "Ubuntu"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "newline"
+        },
+        {
+            "type": "prompt",
+            "alignment": "left",
+            "segments": [
+                {
+                    "type": "text",
+                    "style": "plain",
+                    "foreground": "#D4E157",
+                    "properties": {
+                        "text": "\uF101"
+                    }
+                }
+            ]
+        }
+    ]
+}
