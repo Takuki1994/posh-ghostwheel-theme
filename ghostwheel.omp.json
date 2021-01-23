@@ -11,9 +11,10 @@
                     "style": "plain",
                     "foreground": "#26C6DA",
                     "properties": {
-                        "style": "agnoster_short",
-                        "folder_separator_icon": "<#546E7A> ＞ </>",
-                        "folder_icon": "<#4169e1>📂</>"
+                        "style": "agnoster",
+                        "folder_separator_icon": "<#546E7A>/</>",
+                        "folder_icon": "<#546E7A>…</>",
+                        "prefix": " <#4169e1>📁</> "
                     }
                 },
                 {
@@ -29,8 +30,8 @@
                         "display_stash_count": true,
                         "status_colors_enabled": true,
                         "local_working_icon": " 📝",
-                        "local_staged_icon": " ✅",
-                        "stash_count_icon": "📥 ",
+                        "local_staged_icon": " ✔",
+                        "stash_count_icon": " 📥 ",
                         "working_color": "#ffff00",
                         "staging_color": "#3cb371",
                         "local_changes_color": "#ffff00",
@@ -48,11 +49,13 @@
                 {
                     "type": "exit",
                     "style": "plain",
-                    "foreground": "#ffffff",
+                    "foreground": "#00ff00",
                     "properties": {
                         "display_exit_code": true,
-                        "always_enabled": false,
+                        "always_enabled": true,
                         "error_color": "#e91e63",
+                        "success_icon":"✔",
+                        "error_icon":"❌",
                         "postfix": " <#546E7A>＜</>"
                     }
                 },
@@ -95,9 +98,9 @@
                 {
                     "type": "text",
                     "style": "plain",
-                    "foreground": "#D4E157",
+                    "foreground": "#c0c0c0",
                     "properties": {
-                        "text": "\uF101"
+                        "text": "》"
                     }
                 }
             ]
