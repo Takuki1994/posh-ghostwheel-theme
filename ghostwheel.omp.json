@@ -23,11 +23,15 @@
                     "properties": {
                         "prefix": "<#546E7A>＞</> ",
                         "branch_icon": "<#ff6347>git</> ",
+                        "branch_ahead_icon":"⬆",
+                        "branch_behind_icon": "⬇",
+                        "display_stash_count": true,
                         "status_colors_enabled": true,
+                        "local_working_icon": " 📝",
+                        "stash_count_icon": "📥 ",
                         "working_color": "#ffff00",
-                        "ahead_and_behind_color": "#ff6347",
-                        "ahead_color": "#ff6347",
-                        "behind_color": "#ff6347",
+                        "ahead_color": "#800080",
+                        "behind_color": "#800080",
                         "staging_color": "#3cb371"
                     }
                 }
