@@ -4,7 +4,6 @@
         {
             "type": "prompt",
             "alignment": "left",
-            "vertical_offset": 0,
             "segments": [
                 {
                     "type": "path",
@@ -45,6 +44,7 @@
         {
             "type": "prompt",
             "alignment": "right",
+            "horizontal_offset": -1,
             "segments": [
                 {
                     "type": "exit",
@@ -57,14 +57,6 @@
                         "success_icon":"✔",
                         "error_icon":"❌",
                         "postfix": " <#546E7A>＜</>"
-                    }
-                },
-                {
-                    "type": "root",
-                    "style": "plain",
-                    "foreground": "#D4E157",
-                    "properties": {
-                        "root_icon": "\uF0E7"
                     }
                 },
                 {
