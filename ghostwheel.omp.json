@@ -4,6 +4,7 @@
         {
             "type": "prompt",
             "alignment": "left",
+            "horizontal_offset": 1,
             "segments": [
                 {
                     "type": "path",
@@ -12,8 +13,7 @@
                     "properties": {
                         "style": "agnoster",
                         "folder_separator_icon": "<#546E7A>/</>",
-                        "folder_icon": "<#546E7A>…</>",
-                        "prefix": " <#4169e1>📁</> "
+                        "folder_icon": "<#546E7A>…</>"
                     }
                 },
                 {
@@ -28,9 +28,9 @@
                         "branch_behind_icon": "⏬",
                         "display_stash_count": true,
                         "status_colors_enabled": true,
-                        "local_working_icon": " 📝",
+                        "local_working_icon": " +",
                         "local_staged_icon": " ✔",
-                        "stash_count_icon": " 📥 ",
+                        "stash_count_icon": " Ｓ ",
                         "working_color": "#ffff00",
                         "staging_color": "#3cb371",
                         "local_changes_color": "#ffff00",
