@@ -11,7 +11,7 @@
                     "style": "plain",
                     "foreground": "#26C6DA",
                     "properties": {
-                        "style": "agnoster",
+                        "style": "agnoster_short",
                         "folder_separator_icon": "<#546E7A>/</>",
                         "folder_icon": "<#546E7A>…</>"
                     }
@@ -22,7 +22,7 @@
                     "foreground": "#696969",
                     "properties": {
                         "color_background": false,
-                        "prefix": "<#546E7A>＞</> ",
+                        "prefix": "<#546E7A>›</> ",
                         "branch_icon": "<#ff6347>git</> ",
                         "branch_ahead_icon":"⏫",
                         "branch_behind_icon": "⏬",
@@ -44,7 +44,6 @@
         {
             "type": "prompt",
             "alignment": "right",
-            "horizontal_offset": -1,
             "segments": [
                 {
                     "type": "exit",
@@ -56,7 +55,7 @@
                         "error_color": "#e91e63",
                         "success_icon":"✔",
                         "error_icon":"✖",
-                        "postfix": " <#546E7A>＜</>"
+                        "postfix": " <#546E7A>‹</>"
                     }
                 },
                 {
@@ -64,9 +63,9 @@
                     "style": "plain",
                     "foreground": "#ffff00",
                     "properties": {
-                        "postfix": " <#546E7A>＜</>",
+                        "postfix": "<#546E7A> ‹</>",
                         "prefix": " <#0068b7>Python</> ",
-                        "display_mode": "always"
+                        "display_mode": "context"
                     }
                 },
                 {
