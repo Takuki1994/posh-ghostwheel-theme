@@ -55,7 +55,7 @@
                         "error_color": "#e91e63",
                         "success_icon":"✔",
                         "error_icon":"✖",
-                        "postfix": " <#546E7A>‹</>"
+                        "postfix": " <#546E7A> ‹</>"
                     }
                 },
                 {
