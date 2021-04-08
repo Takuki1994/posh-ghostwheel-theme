@@ -29,7 +29,7 @@
                         "display_stash_count": true,
                         "status_colors_enabled": true,
                         "local_working_icon": " +",
-                        "local_staged_icon": " ✔",
+                        "local_staged_icon": " ✅",
                         "stash_count_icon": " Ｓ ",
                         "working_color": "#ffff00",
                         "staging_color": "#3cb371",
@@ -53,8 +53,8 @@
                         "display_exit_code": true,
                         "always_enabled": true,
                         "error_color": "#e91e63",
-                        "success_icon":"✔",
-                        "error_icon":"✖",
+                        "success_icon":"✅",
+                        "error_icon":"❌",
                         "postfix": " <#546E7A> ‹</>"
                     }
                 },
