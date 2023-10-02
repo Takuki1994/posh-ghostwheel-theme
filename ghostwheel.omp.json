@@ -38,44 +38,6 @@
       "type": "prompt"
     },
     {
-      "alignment": "right",
-      "segments": [
-        {
-          "foreground": "#00ff00",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}#e91e63{{ end }}"
-          ],
-          "properties": {
-            "always_enabled": true,
-            "display_exit_code": true
-          },
-          "style": "plain",
-          "template": " {{ if gt .Code 0 }}\u274c {{ .Meaning }}{{ else }}\u2705{{ end }} <#546E7A> \u2039</>",
-          "type": "exit"
-        },
-        {
-          "foreground": "#ffff00",
-          "properties": {
-            "display_mode": "context"
-          },
-          "style": "plain",
-          "template": " <#0068b7>Python</> {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}<#546E7A> \u2039</>",
-          "type": "python"
-        },
-        {
-          "foreground": "#00bfff",
-          "properties": {
-            "ubuntu": "Ubuntu",
-            "windows": "Win"
-          },
-          "style": "plain",
-          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
-          "type": "os"
-        }
-      ],
-      "type": "prompt"
-    },
-    {
       "type": "newline"
     },
     {
