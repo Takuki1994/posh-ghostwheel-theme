@@ -6,6 +6,18 @@
       "horizontal_offset": 1,
       "segments": [
         {
+          "type": "root",
+          "style": "plain",
+          "foreground": "#ffff66",
+          "template": ""
+        },
+        {
+          "foreground": "#546E7A",
+          "style": "plain",
+          "type": "root",
+          "template": "\uf460"
+        },
+        {
           "foreground": "#26C6DA",
           "properties": {
             "folder_icon": "<#546E7A>\u2026</>",
@@ -179,6 +191,24 @@
           "style": "plain",
           "type": "battery",
           "template": " \u2039"
+        },
+        {
+          "type": "shell",
+          "style": "plain",
+          "foreground": "#cdcdcd",
+          "properties": {
+            "mapped_shell_names": {
+              "pwsh": "\udb82\ude0a",
+              "cmd": "\uebc4",
+              "bash": "\udb84\udd83"
+            }
+          }
+        },
+        {
+          "foreground": "#546E7A",
+          "style": "plain",
+          "type": "text",
+          "template": "\u2039"
         },
         {
           "foreground": "#00bfff",
