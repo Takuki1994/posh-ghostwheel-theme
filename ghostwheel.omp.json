@@ -142,12 +142,18 @@
         },
         {
           "foreground": "#0068b7",
+          "properties": {
+            "display_mode": "context"
+          },
           "style": "plain",
           "type": "python",
           "template": " \ue73c"
         },
         {
           "foreground": "#546E7A",
+          "properties": {
+            "display_mode": "context"
+          },
           "style": "plain",
           "type": "python",
           "template": " \u2039"
