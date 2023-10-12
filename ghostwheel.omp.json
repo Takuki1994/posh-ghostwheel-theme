@@ -13,45 +13,170 @@
             "style": "agnoster_short"
           },
           "style": "plain",
-          "template": " {{ .Path }} ",
+          "template": " {{ .Path }}",
           "type": "path"
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "template": "\uf460 ",
+          "foreground": "#546E7A"
         },
         {
           "foreground": "#696969",
           "foreground_templates": [
-            "{{ if or (.Working.Changed) (.Staging.Changed) }}#ffff00{{ end }}",
+            "{{ if .Working.Changed }}#ffff00{{ end }}",
+            "{{ if .Staging.Changed }}#3cb371{{end}}",
             "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#ff0000{{ end }}",
             "{{ if gt .Ahead 0 }}#9400d3{{ end }}",
             "{{ if gt .Behind 0 }}#1e90ff{{ end }}"
           ],
           "properties": {
-            "branch_ahead_icon": "\u23eb",
-            "branch_behind_icon": "\u23ec",
-            "branch_icon": "<#ff6347>git</> ",
-            "fetch_stash_count": true
+            "branch_ahead_icon": "\uf176",
+            "branch_behind_icon": "\uf175",
+            "branch_icon": "󰘬 ",
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": true,
+            "fetch_worktree_count": true
           },
           "style": "plain",
-          "template": "<#546E7A>\u203a</> {{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }} +<#ffff00>{{ .Working.String }}</>{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \u2705<#3cb371>{{ .Staging.String }}</>{{ end }}{{ if gt .StashCount 0}} \uff33 {{ .StashCount }}{{ end }}{{ if gt .WorktreeCount 0}} \uf1bb {{ .WorktreeCount }}{{ end }} ",
+          "template": "{{ .UpstreamIcon }}",
+          "type": "git"
+        },
+        {
+          "foreground": "#696969",
+          "min_width": 62,
+          "foreground_templates": [
+            "{{ if .Working.Changed }}#ffff00{{ end }}",
+            "{{ if .Staging.Changed }}#3cb371{{end}}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#ff0000{{ end }}",
+            "{{ if gt .Ahead 0 }}#9400d3{{ end }}",
+            "{{ if gt .Behind 0 }}#1e90ff{{ end }}"
+          ],
+          "properties": {
+            "branch_ahead_icon": "\uf176",
+            "branch_behind_icon": "\uf175",
+            "branch_icon": "󰘬 ",
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": true,
+            "fetch_worktree_count": true
+          },
+          "style": "plain",
+          "template": "{{ .HEAD }}",
+          "type": "git"
+        },
+        {
+          "foreground": "#696969",
+          "foreground_templates": [
+            "{{ if .Working.Changed }}#ffff00{{ end }}",
+            "{{ if .Staging.Changed }}#3cb371{{end}}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#ff0000{{ end }}",
+            "{{ if gt .Ahead 0 }}#9400d3{{ end }}",
+            "{{ if gt .Behind 0 }}#1e90ff{{ end }}"
+          ],
+          "properties": {
+            "branch_ahead_icon": "\uf176",
+            "branch_behind_icon": "\uf175",
+            "branch_icon": "󰘬 ",
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": true,
+            "fetch_worktree_count": true
+          },
+          "style": "plain",
+          "template": "{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf0c7 {{ .StashCount }}{{ end }}",
           "type": "git"
         }
       ],
       "type": "prompt"
     },
     {
-      "type": "newline"
+      "alignment": "right",
+      "segments": [
+        {
+          "foreground": "#00ff00",
+          "foreground_templates": [
+            "{{ if .Error}}#e91e63{{ end }}"
+          ],
+          "properties": {
+            "always_enabled": true,
+            "display_exit_code": true
+          },
+          "style": "plain",
+          "template": "{{ if .Error }}\uea87 {{ .String }}{{ else }}\uf00c{{ end }}",
+          "type": "status"
+        },
+        {
+          "foreground": "#546E7A",
+          "style": "plain",
+          "type": "text",
+          "template": " \u2039"
+        },
+        {
+          "foreground": "#0068b7",
+          "style": "plain",
+          "type": "python",
+          "template": " \ue73c "
+        },
+        {
+          "foreground": "#ffff00",
+          "properties": {
+            "display_mode": "context"
+          },
+          "style": "plain",
+          "template": "{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}",
+          "type": "python"
+        },
+        {
+          "foreground": "#546E7A",
+          "style": "plain",
+          "type": "python",
+          "template": " \u2039"
+        },
+        {
+          "foreground": "#00bfff",
+          "properties": {
+            "ubuntu": "\uf31b",
+            "windows": "\ue70f"
+          },
+          "style": "plain",
+          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
+          "type": "os"
+        }
+      ],
+      "type": "rprompt",
+      "overflow": "break"
     },
     {
+      "newline": true,
       "alignment": "left",
       "segments": [
         {
           "foreground": "#c0c0c0",
           "style": "plain",
-          "template": " \u300b ",
+          "template": " \uf101 ",
           "type": "text"
         }
       ],
       "type": "prompt"
     }
   ],
+  "transient_prompt": {
+    "background": "transparent",
+    "foreground": "#c0c0c0",
+    "template": " \uf101 "
+  },
+  "valid_line": {
+      "background": "transparent",
+      "foreground": "#00ff00",
+      "template": "\uf42e "
+  },
+  "error_line": {
+      "background": "transparent",
+      "foreground": "#e91e63",
+      "template": "\ue009 "
+  },
   "version": 2
 }
