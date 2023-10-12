@@ -10,10 +10,17 @@
           "properties": {
             "folder_icon": "<#546E7A>\u2026</>",
             "folder_separator_icon": "<#546E7A>/</>",
-            "style": "agnoster_short"
+            "style": "agnoster_short",
+            "max_depth": 1,
+            "mapped_locations_enabled": true,
+            "mapped_locations": {
+              "~": "\uf07c  ~",
+              "D:/": "\uf07c  D:",
+              "C:/": "\uf07c  C:"
+            }
           },
           "style": "plain",
-          "template": " {{ .Path }}",
+          "template": " {{ .Path }} ",
           "type": "path"
         },
         {
@@ -105,7 +112,7 @@
             "display_exit_code": true
           },
           "style": "plain",
-          "template": "{{ if .Error }}\uea87 {{ .String }}{{ else }}\uf00c{{ end }}",
+          "template": "{{ if .Error }}{{ .String }} \uf40c{{ else }}\uf00c{{ end }}",
           "type": "status"
         },
         {
@@ -115,10 +122,14 @@
           "template": " \u2039"
         },
         {
-          "foreground": "#0068b7",
+          "foreground": "#ffff00",
+          "properties": {
+            "display_mode": "context"
+          },
           "style": "plain",
+          "template": " {{ if .Venv }}{{ .Venv }}{{ end }}",
           "type": "python",
-          "template": " \ue73c "
+          "min_width": 62
         },
         {
           "foreground": "#ffff00",
@@ -126,13 +137,41 @@
             "display_mode": "context"
           },
           "style": "plain",
-          "template": "{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}",
+          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
           "type": "python"
+        },
+        {
+          "foreground": "#0068b7",
+          "style": "plain",
+          "type": "python",
+          "template": " \ue73c"
         },
         {
           "foreground": "#546E7A",
           "style": "plain",
           "type": "python",
+          "template": " \u2039"
+        },
+        {
+          "type": "battery",
+          "style": "plain",
+          "foreground": "#ffeb3b",
+          "foreground_templates": [
+            "{{if eq \"Charging\" .State.String}}#40c4ff{{end}}",
+            "{{if eq \"Discharging\" .State.String}}#ff5722{{end}}",
+            "{{if eq \"Full\" .State.String}}#4caf50{{end}}"
+          ],
+          "template": " {{ if not .Error }}{{ .Percentage }}{{ .Icon }}{{ end }} ",
+          "properties": {
+            "discharging_icon": " ",
+            "charging_icon": " ",
+            "charged_icon": " "
+          }
+        },
+        {
+          "foreground": "#546E7A",
+          "style": "plain",
+          "type": "battery",
           "template": " \u2039"
         },
         {
@@ -146,8 +185,8 @@
           "type": "os"
         }
       ],
-      "type": "rprompt",
-      "overflow": "break"
+      "type": "prompt",
+      "overflow": "hide"
     },
     {
       "newline": true,
