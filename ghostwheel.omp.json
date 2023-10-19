@@ -159,7 +159,7 @@
           },
           "style": "plain",
           "type": "python",
-          "template": " \ue73c"
+          "template": " \udb80\udf20 "
         },
         {
           "foreground": "#546E7A",
@@ -168,7 +168,39 @@
           },
           "style": "plain",
           "type": "python",
-          "template": " \u2039"
+          "template": "\u2039"
+        },
+        {
+          "type": "shell",
+          "style": "plain",
+          "foreground": "#cdcdcd",
+          "properties": {
+            "mapped_shell_names": {
+              "pwsh": "Powershell",
+              "cmd": "Cmd",
+              "bash": "bash"
+            }
+          },
+          "template": " {{ .Name }}",
+          "min_width": 62
+        },
+        {
+          "type": "shell",
+          "style": "plain",
+          "foreground": "#cdcdcd",
+          "properties": {
+            "mapped_shell_names": {
+              "pwsh": "\udb82\ude0a",
+              "cmd": "\uebc4",
+              "bash": "\udb84\udd83"
+            }
+          }
+        },
+        {
+          "foreground": "#546E7A",
+          "style": "plain",
+          "type": "text",
+          "template": "\u2039"
         },
         {
           "type": "battery",
@@ -193,22 +225,15 @@
           "template": "\u2039"
         },
         {
-          "type": "shell",
-          "style": "plain",
-          "foreground": "#cdcdcd",
+          "foreground": "#00bfff",
           "properties": {
-            "mapped_shell_names": {
-              "pwsh": "\udb82\ude0a",
-              "cmd": "\uebc4",
-              "bash": "\udb84\udd83"
-            }
-          }
-        },
-        {
-          "foreground": "#546E7A",
+            "ubuntu": "\uf31b",
+            "windows": "\ue70f"
+          },
           "style": "plain",
-          "type": "text",
-          "template": "\u2039"
+          "template": " {{ if .WSL }}WSL at{{ end }}",
+          "type": "os",
+          "min_width": 62
         },
         {
           "foreground": "#00bfff",
@@ -217,7 +242,7 @@
             "windows": "\ue70f"
           },
           "style": "plain",
-          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
+          "template": " {{.Icon}} ",
           "type": "os"
         }
       ],
