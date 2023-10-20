@@ -134,6 +134,25 @@
           "template": " \u2039"
         },
         {
+          "min_width": 62,
+          "type": "cmake",
+          "style": "plain",
+          "foreground": "#2cb25b",
+          "template": " cmake {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue61e"
+        },
+        {
+          "type": "cmake",
+          "style": "plain",
+          "foreground": "#2cb25b",
+          "template": " \ue61d "
+        },
+        {
+          "foreground": "#546E7A",
+          "style": "plain",
+          "type": "cmake",
+          "template": "\u2039"
+        },
+        {
           "foreground": "#ffff00",
           "properties": {
             "display_mode": "context"
