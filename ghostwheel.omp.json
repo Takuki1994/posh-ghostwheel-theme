@@ -244,6 +244,20 @@
           "template": "\u2039"
         },
         {
+          "type": "time",
+          "style": "plain",
+          "foreground": "#d0ecff",
+          "properties": {
+            "time_format": "15:04:05"
+          }
+        },
+        {
+          "foreground": "#546E7A",
+          "style": "plain",
+          "type": "text",
+          "template": "\u2039"
+        },
+        {
           "foreground": "#00bfff",
           "properties": {
             "ubuntu": "\uf31b",
