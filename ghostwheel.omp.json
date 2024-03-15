@@ -22,14 +22,19 @@
           "properties": {
             "folder_icon": "<#546E7A>\u2026</>",
             "folder_separator_icon": "<#546E7A>/</>",
+            "style": "folder"
+          },
+          "style": "plain",
+          "template": "{{ if .RootDir }}RootDir{{ else if matchP \"^C:\\\\\\\\Users\\\\\\\\[^\\\\\\\\]+$\" .Location }}Home{{ else if matchP \"\\\\.[^\\\\\\\\]+\" .Path }}Hidden{{ else if glob \".git\\\\\\\\*\" }}Git{{ else }}\uf115 {{ end }}",
+          "type": "path"
+        },
+        {
+          "foreground": "#26C6DA",
+          "properties": {
+            "folder_icon": "<#546E7A>\u2026</>",
+            "folder_separator_icon": "<#546E7A>/</>",
             "style": "agnoster_short",
-            "max_depth": 1,
-            "mapped_locations_enabled": true,
-            "mapped_locations": {
-              "~": "\uf07c  ~",
-              "D:/": "\uf07c  D:",
-              "C:/": "\uf07c  C:"
-            }
+            "max_depth": 1
           },
           "style": "plain",
           "template": " {{ .Path }}",
