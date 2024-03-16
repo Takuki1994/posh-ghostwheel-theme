@@ -37,7 +37,7 @@
             "max_depth": 1
           },
           "style": "plain",
-          "template": " {{ .Path }}",
+          "template": "{{ .Path }}",
           "type": "path"
         },
         {
