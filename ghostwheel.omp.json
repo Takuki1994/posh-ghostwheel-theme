@@ -15,7 +15,7 @@
           "foreground": "#546E7A",
           "style": "plain",
           "type": "root",
-          "template": "\uf460"
+          "template": "\uf460 "
         },
         {
           "foreground": "blue",
