@@ -25,7 +25,7 @@
             "style": "folder"
           },
           "style": "plain",
-          "template": "{{ if .RootDir }}\ue271 {{ else if matchP \"^C:\\\\\\\\Users\\\\\\\\[^\\\\\\\\]+$\" .Location }}\uf46d {{ else if matchP \"^\\\\.[^\\\\\\\\]+\" .Path }}\uf4c5 {{.Path}}{{ else if glob \".git\\\\\\\\*\" }}<#f74e27>\ue65d</> {{ else if matchP \"^\\\\\\\\\\\\\\\\[^\\\\\\\\]+\" .Location }}\udb83\udc81 {{ else }}\uf115 {{ end }}",
+          "template": "{{ if .RootDir }}\ue271 {{ else if matchP \"^C:\\\\\\\\Users\\\\\\\\[^\\\\\\\\]+$\" .Location }}\uf46d {{ else if matchP \"^\\\\.[^\\\\\\\\]+\" .Path }}\uf4c5 {{ else if glob \".git\\\\\\\\*\" }}<#f74e27>\ue65d</> {{ else if matchP \"^\\\\\\\\\\\\\\\\[^\\\\\\\\]+\" .Location }}\udb83\udc81 {{ else }}\uf115 {{ end }}",
           "type": "path"
         },
         {
