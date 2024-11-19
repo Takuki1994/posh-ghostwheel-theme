@@ -76,7 +76,7 @@
           "properties": {
             "branch_ahead_icon": "\uf176",
             "branch_behind_icon": "\uf175",
-            "branch_icon": "\udb81\ude2c ",
+            "branch_icon": "\ue725",
             "cache_duration": "none",
             "fetch_stash_count": true,
             "fetch_status": true,
@@ -99,7 +99,7 @@
           "properties": {
             "branch_ahead_icon": "\uf176",
             "branch_behind_icon": "\uf175",
-            "branch_icon": "\udb81\ude2c ",
+            "branch_icon": "\ue725",
             "cache_duration": "none",
             "fetch_stash_count": true,
             "fetch_status": true,
@@ -123,7 +123,7 @@
           "properties": {
             "branch_ahead_icon": "\uf176",
             "branch_behind_icon": "\uf175",
-            "branch_icon": "\udb81\ude2c ",
+            "branch_icon": "\ue725",
             "cache_duration": "none",
             "fetch_stash_count": true,
             "fetch_status": true,
@@ -226,10 +226,10 @@
             "cache_duration": "none",
             "display_mode": "context"
           },
-          "template": " \udb80\udf20 ",
+          "template": " \ue73c ",
+          "style": "plain",
           "foreground": "#0068b7",
-          "type": "python",
-          "style": "plain"
+          "type": "python"
         },
         {
           "properties": {
@@ -260,9 +260,9 @@
           "properties": {
             "cache_duration": "none",
             "mapped_shell_names": {
-              "bash": "\udb84\udd83",
+              "bash": "\ue760",
               "cmd": "\uebc4",
-              "pwsh": "\udb82\ude0a"
+              "pwsh": "\uebc7"
             }
           },
           "foreground": "#cdcdcd",
