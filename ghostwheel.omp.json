@@ -45,7 +45,7 @@
             "folder_separator_icon": "<#546E7A>/</>",
             "style": "folder"
           },
-          "template": "{{ if .RootDir }}\ue271 {{ else if matchP \"^C:/Users/[^/]+$\" .Location }}\uf46d {{ else if matchP \"^\\\\.[^/]+$\" .Path }}\uf4c5 {{ else if glob \".git\\\\\\\\*\" }}<#f74e27>\ue65d</> {{ else if matchP \"^//[^/]+\" .Location }}\udb83\udc81 {{ else }}\uf115 {{ end }}",
+          "template": "{{ if .RootDir }}\ue271 {{ else if matchP \"^C:/Users/[^/]+$\" .Location }}\uf46d {{ else if matchP \"^\\\\.[^/]+$\" .Path }}\uf4c5 {{ else if glob \".git\\\\\\\\*\" }}<#f74e27>\ue65d</> {{ else if matchP \"^//[^/]+\" .Location }}\uf1e0 {{ else }}\uf115 {{ end }}",
           "foreground": "blue",
           "type": "path",
           "style": "plain"
@@ -285,7 +285,7 @@
             "charging_icon": "<f>\ue234 </>",
             "discharging_icon": "<f>\ue231 </>"
           },
-          "template": " {{ if not .Error }}{{ .Percentage }}\udb80\udff0 {{ .Icon }}{{ end }}",
+          "template": " {{ if not .Error }}{{ .Percentage }}\uf295 {{ .Icon }}{{ end }}",
           "foreground": "#ffeb3b",
           "type": "battery",
           "style": "plain",
