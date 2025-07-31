@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "valid_line": {
     "template": "\uf42e ",
-    "foreground": "#00ff00",
+    "foreground": "green",
     "background": "transparent"
   },
   "transient_prompt": {
@@ -12,7 +12,7 @@
   },
   "error_line": {
     "template": "\ue009 ",
-    "foreground": "#e91e63",
+    "foreground": "red",
     "background": "transparent"
   },
   "blocks": [
@@ -25,7 +25,7 @@
             "cache_duration": "none"
           },
           "template": "\uf0e7",
-          "foreground": "#ffff66",
+          "foreground": "yellow",
           "type": "root",
           "style": "plain"
         },
@@ -84,15 +84,15 @@
             "fetch_worktree_count": true
           },
           "template": "{{ .UpstreamIcon }} ",
-          "foreground": "#696969",
+          "foreground": "default",
           "type": "git",
           "style": "plain",
           "foreground_templates": [
-            "{{ if .Working.Changed }}#ffff00{{ end }}",
-            "{{ if .Staging.Changed }}#3cb371{{end}}",
-            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#ff0000{{ end }}",
-            "{{ if gt .Ahead 0 }}#9400d3{{ end }}",
-            "{{ if gt .Behind 0 }}#1e90ff{{ end }}"
+            "{{ if .Working.Changed }}yellow{{ end }}",
+            "{{ if .Staging.Changed }}green{{end}}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}red{{ end }}",
+            "{{ if gt .Ahead 0 }}magenta{{ end }}",
+            "{{ if gt .Behind 0 }}blue{{ end }}"
           ]
         },
         {
@@ -107,15 +107,15 @@
             "fetch_worktree_count": true
           },
           "template": "{{ .HEAD }} ",
-          "foreground": "#696969",
+          "foreground": "default",
           "type": "git",
           "style": "plain",
           "foreground_templates": [
-            "{{ if .Working.Changed }}#ffff00{{ end }}",
-            "{{ if .Staging.Changed }}#3cb371{{end}}",
-            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#ff0000{{ end }}",
-            "{{ if gt .Ahead 0 }}#9400d3{{ end }}",
-            "{{ if gt .Behind 0 }}#1e90ff{{ end }}"
+            "{{ if .Working.Changed }}yellow{{ end }}",
+            "{{ if .Staging.Changed }}green{{end}}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}red{{ end }}",
+            "{{ if gt .Ahead 0 }}magenta{{ end }}",
+            "{{ if gt .Behind 0 }}blue{{ end }}"
           ],
           "min_width": 62
         },
@@ -131,15 +131,15 @@
             "fetch_worktree_count": true
           },
           "template": "{{if .BranchStatus }}{{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf0c7 {{ .StashCount }}{{ end }}",
-          "foreground": "#696969",
+          "foreground": "default",
           "type": "git",
           "style": "plain",
           "foreground_templates": [
-            "{{ if .Working.Changed }}#ffff00{{ end }}",
-            "{{ if .Staging.Changed }}#3cb371{{end}}",
-            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#ff0000{{ end }}",
-            "{{ if gt .Ahead 0 }}#9400d3{{ end }}",
-            "{{ if gt .Behind 0 }}#1e90ff{{ end }}"
+            "{{ if .Working.Changed }}yellow{{ end }}",
+            "{{ if .Staging.Changed }}green{{end}}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}red{{ end }}",
+            "{{ if gt .Ahead 0 }}magenta{{ end }}",
+            "{{ if gt .Behind 0 }}blue{{ end }}"
           ]
         }
       ]
@@ -206,7 +206,7 @@
             "display_mode": "context"
           },
           "template": " {{ if .Venv }}{{ .Venv }}{{ end }}",
-          "foreground": "#ffff00",
+          "foreground": "yellow",
           "type": "python",
           "style": "plain",
           "min_width": 62
@@ -217,7 +217,7 @@
             "display_mode": "context"
           },
           "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
-          "foreground": "#ffff00",
+          "foreground": "yellow",
           "type": "python",
           "style": "plain"
         },
@@ -228,7 +228,7 @@
           },
           "template": " \ue73c ",
           "style": "plain",
-          "foreground": "#0068b7",
+          "foreground": "blue",
           "type": "python"
         },
         {
@@ -251,7 +251,7 @@
             }
           },
           "template": " {{ .Name }}",
-          "foreground": "#cdcdcd",
+          "foreground": "default",
           "type": "shell",
           "style": "plain",
           "min_width": 62
@@ -265,7 +265,7 @@
               "pwsh": "\uebc7"
             }
           },
-          "foreground": "#cdcdcd",
+          "foreground": "default",
           "type": "shell",
           "style": "plain"
         },
@@ -286,13 +286,13 @@
             "discharging_icon": "<f>\ue231 </>"
           },
           "template": " {{ if not .Error }}{{ .Percentage }}\uf295 {{ .Icon }}{{ end }}",
-          "foreground": "#ffeb3b",
+          "foreground": "yellow",
           "type": "battery",
           "style": "plain",
           "foreground_templates": [
-            "{{if eq \"Charging\" .State.String}}#40c4ff{{end}}",
-            "{{if eq \"Discharging\" .State.String}}#ff5722{{end}}",
-            "{{if eq \"Full\" .State.String}}#4caf50{{end}}"
+            "{{if eq \"Charging\" .State.String}}blue{{end}}",
+            "{{if eq \"Discharging\" .State.String}}red{{end}}",
+            "{{if eq \"Full\" .State.String}}green{{end}}"
           ]
         },
         {
@@ -309,7 +309,7 @@
             "cache_duration": "none",
             "time_format": "15:04:05"
           },
-          "foreground": "#d0ecff",
+          "foreground": "cyan",
           "type": "time",
           "style": "plain"
         },
@@ -329,7 +329,7 @@
             "windows": "\ue70f"
           },
           "template": " {{ if .WSL }}WSL at{{ end }}",
-          "foreground": "#00bfff",
+          "foreground": "blue",
           "type": "os",
           "style": "plain",
           "min_width": 62
@@ -341,7 +341,7 @@
             "windows": "\ue70f"
           },
           "template": " {{.Icon}} ",
-          "foreground": "#00bfff",
+          "foreground": "blue",
           "type": "os",
           "style": "plain"
         }
