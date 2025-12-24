@@ -324,9 +324,7 @@
         },
         {
           "properties": {
-            "cache_duration": "none",
-            "ubuntu": "\uf31b",
-            "windows": "\ue70f"
+            "cache_duration": "none"
           },
           "template": " {{ if .WSL }}WSL at{{ end }}",
           "foreground": "blue",
@@ -336,9 +334,7 @@
         },
         {
           "properties": {
-            "cache_duration": "none",
-            "ubuntu": "\uf31b",
-            "windows": "\ue70f"
+            "cache_duration": "none"
           },
           "template": " {{.Icon}} ",
           "foreground": "blue",
