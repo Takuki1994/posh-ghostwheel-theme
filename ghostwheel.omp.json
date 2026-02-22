@@ -242,6 +242,12 @@
           "style": "plain"
         },
         {
+          "template": "{{ if .Env.VCTOOLSVERSION }}VS Developer Mod \ue70c \u2039{{ end }}",
+          "foreground": "#546E7A",
+          "type": "text",
+          "style": "plain"
+        },
+        {
           "properties": {
             "cache_duration": "none",
             "mapped_shell_names": {
