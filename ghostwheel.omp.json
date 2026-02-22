@@ -316,7 +316,7 @@
             "time_format": "15:04:05"
           },
           "foreground": "cyan",
-          "template": "{{ .Format }} \ue383 ",
+          "template": " {{ .Format }} \ue383 ",
           "type": "time",
           "style": "plain"
         },
